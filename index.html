@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gerenciamento de Estoque</h1>
+
+    <h3>Adicionar Produto</h3>
+    <label for="nomeProduto">Nome do Produto:</label>
+    <input type="text" id="nomeProduto"><br>
+
+    <label for="codigoProduto">Código do Produto:</label>
+    <input type="text" id="codigoProduto"><br>
+
+    <label for="descricaoProduto">Descrição do Produto:</label>
+    <input type="text" id="descricaoProduto"><br>
+
+    <label for="precoProduto">Preço do Produto:</label>
+    <input type="number" step="0.01" id="precoProduto"><br>
+
+    <label for="fornecedorProduto">Fornecedor do Produto:</label>
+    <input type="text" id="fornecedorProduto"><br>
+
+    <label for="quantidadeProduto">Quantidade do Produto:</label>
+    <input type="number" id="quantidadeProduto"><br>
+
+    <button onclick="adicionarProduto()">Adicionar Produto</button>
+
+    <h3>Estoque Atual</h3>
+    <table id="estoqueTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Código</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Fornecedor</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Produtos serão exibidos aqui -->
+        </tbody>
+    </table>
+    <!-- Campo para selecionar o produto -->
+<label for="product-select">Escolha um produto:</label>
+<select id="product-select">
+  <option value="produto1">Produto 1</option>
+  <option value="produto2">Produto 2</option>
+  <option value="produto3">Produto 3</option>
+</select>
+
+<a href="demanda.html" id="predict-button">Obter previsão de demanda</a>
+
+    <script src="script.js"></script>
+    <script src="scriptDemanda.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+</body>
+</html>
