@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Estoque - Previsão de Demanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    ...
+    <div id="previsao" style="display: none;">
+      <h2>Previsão de Demanda</h2>
+      <p id="resultadoPrevisao"></p>
+    </div>
+    
+
+    ...
+
+    <h1>Previsão de Demanda de Produtos</h1>
+
+    <label for="produto">Escolha um produto:</label>
+    <select id="produto" onchange="exibirDetalhesProduto()">
+      <option value="">Selecione um produto</option>
+      <option value="produto1">Notebook Dell Inspiron 15</option>
+      <option value="produto2">Notebook Lenovo Ideapad 3</option>
+      <option value="produto3">Smartphone Samsung Galaxy S22</option>
+      <option value="produto4">Smartphone iPhone 13</option>
+      <option value="produto5">Notebook HP Pavilion x360</option>
+    </select>
+
+    <div id="detalhesProduto" class="detalhes-produto" style="display: none;">
+      <h2>Detalhes do Produto</h2>
+      <p id="nomeProduto"></p>
+      <p id="precoProduto"></p>
+      <p id="quantidadeEstoque"></p>
+      <p id="quantidadeVendida"></p>
+      <p id="diaMaisVendido"></p>
+    </div>
+
+    <div id="previsao" style="display: none;">
+      <h2>Previsão de Demanda</h2>
+      <p id="resultadoPrevisao"></p>
+    </div>
+    <button id="generate-demand-forecast-button">Gerar Previsão de Demanda</button>
+    <p id="demand-forecast-result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
